@@ -177,7 +177,7 @@ const App = () => {
         {addTerm && (
           <AddRecipies onBackBtnClick={backAdd} onSubmitClick={addRecipies} />
         )}
-        {updateTerm && (
+        {updateTerm && dataToEdit !== null && (
           <EditRecipies
             data={dataToEdit}
             onBackBtnClick={backUpdate}
