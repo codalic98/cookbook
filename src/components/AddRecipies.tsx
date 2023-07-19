@@ -48,12 +48,18 @@ const AddRecipies = (props: Props) => {
           <form onSubmit={onSubmitBtnClick}>
             <label>Name:</label>
             <div>
-              <input type="text" value={name} onChange={onNameChange} />
+              <input
+                type="text"
+                className="value"
+                value={name}
+                onChange={onNameChange}
+              />
               <br />
               <label>Preparation:</label>
             </div>
             <div>
               <textarea
+                className="value"
                 id="review-text"
                 onChange={onPreparationChange}
                 placeholder="Write a recipie"

@@ -40,11 +40,17 @@ const EditRecipies = (props: Props) => {
           <form onSubmit={onSubmitBtnClick}>
             <label>Name:</label>
             <div>
-              <input type="text" value={name} onChange={onNameChange} />
+              <input
+                type="text"
+                className="value"
+                value={name}
+                onChange={onNameChange}
+              />
             </div>
             <label>Preparation:</label>
             <div>
               <textarea
+                className="value"
                 id="review-text"
                 value={preparation}
                 onChange={onPreparationChange}

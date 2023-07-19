@@ -134,7 +134,7 @@ const App = () => {
   );
 
   return (
-    <>
+    <div className="container">
       <article className="header">
         <header>
           <h1>CookBook</h1>
@@ -149,12 +149,15 @@ const App = () => {
       </article>
       <section className="middle">
         <>
-          <button>All Recipes</button>
+          <h1>All Recipes</h1>
+          <hr />
           {showDeleteModal && recipeToDelete && (
             <div className="modal">
               <div className="modal-content">
                 <p>Are you sure you want to delete {recipeToDelete.name}?</p>
-                <button onClick={confirmDelete}>Delete</button>
+                <button className="buttondelete" onClick={confirmDelete}>
+                  Delete
+                </button>
                 <button onClick={cancelDelete}>Cancel</button>
               </div>
             </div>
@@ -186,7 +189,8 @@ const App = () => {
         )}
         {shownPage === PageEnum.list && (
           <>
-            <button>Favorites</button>
+            <h1>Favorites</h1>
+            <hr />
             {favoritesList.length > 0 ? (
               <RecipiesFavorites
                 list={favoritesList}
@@ -200,7 +204,7 @@ const App = () => {
           </>
         )}
       </section>
-    </>
+    </div>
   );
 };
 
