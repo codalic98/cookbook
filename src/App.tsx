@@ -132,7 +132,9 @@ const App = () => {
   const filteredRecipies = recipieList.filter((recipe) =>
     recipe.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
+  const filteredFavorites = favoritesList.filter((recipe) =>
+    recipe.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   return (
     <div className="container">
       <article className="header">
@@ -191,7 +193,7 @@ const App = () => {
           <>
             <h1>Favorites</h1>
             <hr />
-            {favoritesList.length > 0 ? (
+            {filteredFavorites.length > 0 ? (
               <RecipiesFavorites
                 list={favoritesList}
                 onDeleteClick={deleteRecipies}

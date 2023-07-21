@@ -1,68 +1,84 @@
 .cards {
-    width: 100%;
-    display: table;
-    height: auto;
-    border-radius: 15px;
-    justify-self: center;
-    background-color: #faf0d7;
+  width: 100%;
+  display: table;
+  height: auto;
+  border-radius: 15px;
+  justify-self: center;
+  background-color: #faf0d7;
 }
 
 .card {
-    display: inline-block;
-    align-items: center;
-    border-radius: 5px;
-    background-color: cadetblue;
-    margin: 4%;
-    background-color: #8cc0de;
+  display: inline-block;
+  align-items: center;
+  border-radius: 5px;
+  background-color: cadetblue;
+  margin: 4%;
+  background-color: #8cc0de;
 }
 
 .card-header {
-    border-bottom: 1px solid;
-    text-align: center;
-    font-size: 22px;
+  border-bottom: 1px solid;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  font-size: 22px;
 }
 
 .card-body {
-    font-size: 20px;
-    padding: 5px;
-    border-bottom: 1px solid;
+  font-size: 20px;
+  padding: 5px;
+  border-bottom: 1px solid;
 }
 
 .card-footer {
-    display: flex;
-    justify-content: centers;
+  display: flex;
+  justify-content: center;
 }
 
-.card-footer>button {
-    width: 32px;
+.card-footer > button {
+  width: 32px;
+  height: 30px;
+  border-radius: 5px solid #a5cdc0;
+  background-color: #ffd9c0;
+  border: 1px solid #a5cdc0;
+  font-size: 12px;
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  inline-size: 126px;
+}
+
+@media (min-width: 768px) {
+  .card-footer > button {
+    width: 50px;
     height: 30px;
+    margin: 10px;
     border-radius: 5px solid #a5cdc0;
     background-color: #ffd9c0;
     border: 1px solid #a5cdc0;
     font-size: 12px;
-}
-
-@media (min-width: 768px) {
-    .card-footer>button {
-        width: 50px;
-        height: 30px;
-        margin: 10px;
-        border-radius: 5px solid #a5cdc0;
-        background-color: #ffd9c0;
-        border: 1px solid #a5cdc0;
-        font-size: 12px;
-    }
-    .card-header {
-        border-bottom: 1px solid;
-        text-align: center;
-        font-size: 30px;
-    }
-    .card {
-        width: 200px;
-        display: inline-block;
-        align-items: center;
-        border-radius: 5px;
-        background-color: #8cc0de;
-        margin: 4%;
-    }
+  }
+  .card-header {
+    border-bottom: 1px solid;
+    text-align: center;
+    font-size: 30px;
+    inline-size: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    width: 200px;
+    display: inline-block;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #8cc0de;
+    margin: 3%;
+  }
+  .overflow-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }

@@ -39,7 +39,7 @@ const RecipiesFavorites = (props: Props) => {
         list.map((cook) => (
           <div className="card" key={cook.id}>
             <div className="card-header" onClick={() => viewRecipies(cook)}>
-              <h3>{cook.name}</h3>
+              <h3 className="overflow-ellipsis">{cook.name}</h3>
             </div>
             <div className="card-footer">
               <button onClick={() => onEdit(cook)}>
